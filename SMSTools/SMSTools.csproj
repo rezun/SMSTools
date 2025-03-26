@@ -1,46 +1,42 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>Rezun.SmsTools</RootNamespace>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <LangVersion>7.3</LangVersion>
-    <Configurations>Release;Debug</Configurations>
-    <RepositoryUrl>https://github.com/rezun/SMSTools</RepositoryUrl>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <IncludeSymbols>true</IncludeSymbols>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>Rezun.SmsTools</RootNamespace>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Configurations>Release;Debug</Configurations>
+        <RepositoryUrl>https://github.com/rezun/SMSTools</RepositoryUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-  </PropertyGroup>
+    <PropertyGroup>
+        <PackageId>Rezun.SmsTools</PackageId>
+        <Summary>A library to calculate SMS message sizes and characters (left).</Summary>
+        <Description>A library to calculate SMS message sizes and characters (left).</Description>
+        <Authors>Steve Schmidt</Authors>
+        <Version>2.0.0</Version>
+        <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+        <PackageTags>sms gsm</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/rezun/SMSTools</PackageProjectUrl>
+        <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <PackageId>Rezun.SmsTools</PackageId>
-    <Summary>A library to calculate SMS message sizes and characters (left).</Summary>
-    <Description>A library to calculate SMS message sizes and characters (left).</Description>
-    <Authors>Steve Schmidt</Authors>
-    <Version>1.0.1</Version>
-    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
-    <PackageTags>sms gsm</PackageTags>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/rezun/SMSTools</PackageProjectUrl>
-    <PackageReadmeFile>Readme.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="System.Memory" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.5.4" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Readme.md" Pack="true" PackagePath="\"/>
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="System.Memory"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="System.Memory" Version="4.6.2"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\Readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 </Project>

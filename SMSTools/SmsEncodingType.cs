@@ -1,18 +1,17 @@
-﻿namespace Rezun.SmsTools
+﻿namespace Rezun.SmsTools;
+
+/// <summary>
+/// Represents a possible SMS message encoding type
+/// </summary>
+public enum SmsEncodingType
 {
     /// <summary>
-    /// Represents a possible SMS message encoding type
+    /// Default GSM charset
     /// </summary>
-    public enum SmsEncodingType : byte
-    {
-        /// <summary>
-        /// Default GSM charset
-        /// </summary>
-        GSM7,
+    Gsm7,
 
-        /// <summary>
-        /// UCS-2 Unicode
-        /// </summary>
-        UCS2
-    }
+    /// <summary>
+    /// UCS-2 Unicode
+    /// </summary>
+    Ucs2,
 }
